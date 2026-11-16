@@ -1,0 +1,13 @@
+<div class="card h-100">
+<img [src]="personaje.image" [alt]="personaje.name" class="card-img-top">
+<div class="card-body">
+<h5 class="card-title">{{ personaje.name }}</h5>
+<p class="card-text mb-2">{{ personaje.species }}</p>
+<span class="badge"
+[class.bg-success]="personaje.status === 'Alive'"
+[class.bg-danger]="personaje.status === 'Dead'"
+[class.bg-secondary]="personaje.status === 'unknown'">
+{{ personaje.status }}
+</span>
+</div>
+</div>
